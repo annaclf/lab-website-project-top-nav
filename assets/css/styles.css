@@ -1,0 +1,360 @@
+@font-face {
+	font-family: 'lavanderiadelicate';
+	src: url('../fonts/lavanderia_delicate-webfont.woff2') format('woff2'),
+			 url('../fonts/lavanderia_delicate-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- typography ---- */
+
+body {
+	font: 16px/147% 'Quicksand', sans-serif;
+  color: #555555;
+}
+ul, ol{
+	list-style: none;
+	padding-left: 0;
+}
+img{
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+	opacity: 0.9;
+}
+a:hover{
+	opacity: 1;
+}
+a.to-top{
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	background: #fff;
+	border-radius:4px;
+	z-index: 1;
+	padding: 6px 4px 2px;
+}
+a.contact__link{
+	background: #28c2bb;
+	color:#000;
+	padding:1rem;
+	font-size: 1.2rem;
+	display: inline-block;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+section{
+	text-align: center;
+	margin: 1rem .5rem;
+	padding: 1rem;
+}
+section h3{
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.container{
+	max-width: 800px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0 20px;
+	line-height: 2;
+}
+header a{
+	color: #9b9b9b;
+}
+
+/*-------------
+ 	Header
+-------------*/
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	width: 100%;
+	display: flex;
+	background:#fff;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	text-align: center;
+}
+header nav{
+	flex-basis: 60%;
+}
+
+header h2{
+	font-family: 'lavanderiadelicate';
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+}
+header nav ul{
+	display: flex;
+	justify-content: space-evenly;
+}
+.header__social{
+	display: none;
+}
+/*----------------
+ 	Hero Section
+----------------*/
+
+.hero{
+	margin:0;
+	text-align: center;
+	margin-top: 55px;
+	padding: 2rem 0 0;
+	background: #fff9f0;
+
+}
+.hero h1{
+	font-family: 'lavanderiadelicate';
+	color: #333333;
+	font-size: 4rem;
+	letter-spacing: 3px;
+	margin: 0;
+}
+.hero__footer{
+	width:100%;
+}
+.hero__footer ul{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	margin-bottom: 0;
+}
+.hero__footer ul li{
+	border-bottom: 20px solid #28c2bb;
+	width: 100%;
+}
+.hero__footer ul li:nth-child(2){
+	border-color: #30cfd0;
+}
+.hero__footer ul li:nth-child(3){
+	border-color: #96deda;
+}
+.hero__footer .icon{
+	font-size: 50px;
+}
+.hero__footer .title{
+	font-size: 1rem;
+	font-weight: 100;
+}
+.intro-section h2{
+	font-size: 1.2rem;
+}
+
+/*-------------
+ 	Recipes section
+-------------*/
+
+.recipes{
+	background: #efefef;
+	border-top: 10px solid #bdbdbd;
+	z-index: 3;
+	position: relative;
+}
+.recipes__grid{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-gap: 1rem;
+	margin-top: 2rem;
+}
+.recipes__grid li{
+	border: 10px solid #f25d79;
+	box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.06);
+}
+.recipes__grid li.category-bread{
+	border-color: #28c2bb;
+}
+.recipes__grid li.category-food{
+	border-color: #30cfd0;
+}
+.recipes__grid li.category-cakes{
+	border-color: #96deda;
+}
+.recipes__card{
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+.recipes__card img{
+	display: block;
+	transition: all .17s ease-in-out;
+}
+.recipes__card h2{
+	position: absolute;
+	color: #fff;
+	margin: 0;
+	font-size: .8rem;
+	left: 5px;
+	bottom: 0;
+}
+.recipes__card:hover img{
+	transform: scale(1.2);
+}
+/*-------------
+ 	Links section
+-------------*/
+
+.links{
+	text-align: center;
+	background: #fff9f0;
+  border-top: 10px solid #fcb740;
+}
+.links h3{
+	color: #fcb740;
+}
+
+.contact{
+	background: #b1f2ef;
+	border-top: 10px solid #28c2bb;
+}
+
+/*-------------
+ 	Footer
+-------------*/
+
+.main-footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);	position: relative;
+	margin-top: 4rem;
+}
+.main-footer::before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 136px;
+	width: 100%;
+	z-index: -1;
+	-webkit-transform: skewY(-2deg);
+	transform: skewY(-2deg);
+	-webkit-transform-origin: top left;
+	transform-origin: top left;
+	background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+.main-footer ul{
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+.main-footer ul li{
+	margin: 0 8px;
+}
+footer ul li:first-child{
+	margin-left: 0;
+}
+
+footer ul li:last-child{
+	margin-right: 0;
+}
+
+footer p{
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 10px;
+}
+
+footer p a{
+	color: #fff;
+}
+
+/*-------------
+ 	Single recipe
+-------------*/
+
+
+.recipe{
+	width: 80%;
+	margin: 0 auto;
+}
+ol {
+	counter-reset: ol-counter;
+}
+ol li{
+	margin: 10px 0;
+}
+ol > li:before {
+	content: counter(ol-counter);
+	counter-increment: ol-counter;
+	font-weight: 700;
+	font-size: 1.2rem;
+	border-radius: 30px;
+	display: inline-block;
+	background: #28c2bb;
+	height: 30px;
+	width: 30px;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 30px;
+}
+
+@media (min-width:768px){
+	main{
+		margin-top: 75px;
+	}
+	header nav ul{
+		justify-content: flex-end;
+	}
+	header nav a{
+		padding: 5px;
+	}
+	header nav li:last-child a{
+		padding-right: 0;
+	}
+	.header__social{
+		display: flex;
+		justify-content: space-around;
+		width: 90%;
+	}
+	.hero{
+		margin-top: 0;
+		padding: 0;
+		min-height: auto;
+	}
+	.hero h1{
+		padding: 5rem 1.5rem 3rem;
+		margin-top: 0;
+	}
+	.intro-section h2{
+		font-size: 1.5rem;
+	}
+	.recipes{
+		position: relative;
+		z-index: 2;
+	}
+	.recipe{
+		display: flex;
+		justify-content: space-around;
+		max-width: 556px;
+		margin: 0 auto;
+	}
+	.links__list{
+		display: flex;
+		justify-content: space-between;
+	}
+}

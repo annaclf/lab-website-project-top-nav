@@ -3,7 +3,6 @@
 ## Description
 
 This is an example project built for practice purpose.
-The template is very much inspired from https://www.samanthaming.com/ (🙋‍♀️)
 
 The goal is that the students gain sufficient knowledge from practice to build something by themselves.
 
